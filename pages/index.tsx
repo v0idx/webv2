@@ -22,17 +22,15 @@ export default function Home() {
     return undefined;
   }
 
-  if (process.browser) {
-    let mybtn = document.getElementById("myBtn");
-    window.onscroll = function() {scrollFunction()};
-  
-    function scrollFunction() {
-      if (mybtn) {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-          mybtn.style.display = "flex";
-        } else {
-          mybtn.style.display = "none";
-      }
+  let mybtn = document.getElementById("myBtn");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (mybtn) {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybtn.style.display = "flex";
+      } else {
+        mybtn.style.display = "none";
     }
   }
 
