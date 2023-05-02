@@ -26,10 +26,11 @@ export default function Home() {
 
   if (process.browser) {
     let mybtn = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
   }
 
   
-  window.onscroll = function() {scrollFunction()};
+  
 
   function scrollFunction() {
     if (mybtn) {
