@@ -22,7 +22,13 @@ export default function Home() {
     return undefined;
   }
 
-  let mybtn = document.getElementById("myBtn");
+  var mybtn: HTMLElement;
+
+  if (process.browser) {
+    let mybtn = document.getElementById("myBtn");
+  }
+
+  
   window.onscroll = function() {scrollFunction()};
 
   function scrollFunction() {
