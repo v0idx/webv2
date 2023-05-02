@@ -14,34 +14,46 @@ export default function Home() {
 
   const executeScroll = (sectionId: string) => {
     if (process.browser) {
+      if (sectionId == "") {
+        document.documentElement.scrollIntoView({behavior: 'smooth'});
+        let mbtn = document.getElementById("myBtn");
+        if (mbtn) {
+          mbtn.style.display = "none";
+        }
+      }
       const element = document.getElementById(sectionId);
       if (element) {
         element.scrollIntoView({behavior: 'smooth'});
+        let mbtn = document.getElementById("myBtn");
+        if (mbtn) {
+          mbtn.style.display = "flex";
+        }
+        
       }
     }
     return undefined;
   }
 
-  var mybtn: HTMLElement;
+  // var mybtn: HTMLElement;
 
-  if (process.browser) {
-    let mybtn = document.getElementById("myBtn");
-    window.onscroll = function() {scrollFunction()};
-  }
+  // if (typeof window !== 'undefined') {
+  //   let mybtn = document.getElementById("myBtn");
+  //   window.onscroll = function() {scrollFunction()};
+  // }
 
   
   
 
-  function scrollFunction() {
-    if (mybtn) {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybtn.style.display = "flex";
-      } else {
-        mybtn.style.display = "none";
-    }
-  }
+  // function scrollFunction() {
+  //   if (mybtn) {
+  //     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  //       mybtn.style.display = "flex";
+  //     } else {
+  //       mybtn.style.display = "none";
+  //   }
+  // }
 
-}
+// }
   
 
   
@@ -58,7 +70,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div>
-        <button onClick={() => {topBtn()}} id="myBtn" title="Go to top"><i className="fa fa-caret-up fa-lg"></i></button>
+        <button onClick={() => {executeScroll("")}} id="myBtn" title="Go to top"><i className="fa fa-caret-up fa-lg"></i></button>
         <section id="home">
           <Hero />
           <Skills />

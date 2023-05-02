@@ -23,10 +23,6 @@ body {
   overflow-y: hidden;
 }
 
-.resume-overlay {
-  display: none;
-}
-
 section {
   height: 100vh;
 }

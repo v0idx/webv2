@@ -11,7 +11,7 @@ const Projects = () => {
                             <div className="project-header">
                                 <i className="fa fa-folder-open folder-icon" aria-hidden="true"></i>
                                 <div className="small-icons">
-                                    <a href={project.githubLink}><i className="fa fa-github"></i></a>
+                                    <i className="fa fa-github"></i>
                                 </div>
                             </div>
                             <h3>{project.title}</h3>
