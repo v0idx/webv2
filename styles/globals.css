@@ -2,26 +2,338 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Raleway:wght@400;500;700;800&family=Roboto+Mono:wght@400;500&display=swap');
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #2e3440;
+  color: #DADADB;
+  width: 70%;
+  margin: 0 auto;
+  padding: 0 0;
+  overflow-y: hidden;
+}
+
+.resume-overlay {
+  display: none;
+}
+
+section {
+  height: 100vh;
+}
+
+@keyframes jump {
+  0% {
+    margin-top: 10px;
+  }
+  10% {
+    margin-top: 0;
+  }
+  20% {
+    margin-top: 10px;
+  }
+  100% {
+    margin-top: 10px;
+  }
+}
+
+#projects-button {
+  position: absolute;
+  top: 90vh;
+  left: 50%;
+  width: 0;
+  height: 30px;
+}
+
+#contact-button {
+  position: absolute;
+  top: calc(190vh + 5rem);
+  left: 50%;
+  width: 0;
+  height: 30px;
+}
+
+section .down-arrow {
+  animation: jump 5s infinite;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+section .down-arrow:hover {
+  -webkit-filter: brightness(70%);
+  filter: brightness(70%);
+}
+
+
+.nav-container {
+  font-family: 'Roboto Mono Medium', monospace;
+  font-size: 2rem;
+  color: #88c0d0;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.cta-btn {
+  background-color: #88c0d0;
+  color: #3b4252;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.cta-btn:hover {
+  background-color: #a3be8c;
+  color: #3b4252;
+}
+
+.hero-text h1 {
+  font-size: 10rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: #8fbcbb;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  color: #d8dee9;
+  width: 75%;
+}
+
+.typeOut {
+  font-size: 2.5rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  color: #d8dee9;
+}
+
+.skills-container {
+  padding: 2rem 0;
+}
+
+.skills-container h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+.skills-container .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .skills-container .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.skills-container .skills-grid .skill-card {
+  background-color: #4c566a;
+  color: #e5e9f0;
+  font-weight: 400;
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: all 0.5s ease-in-out;
+  cursor: context-menu;
+}
+
+.skills-container .skills-grid i {
+  font-size: 1.5rem;
+}
+
+.skills-container .skills-grid .skill-card:hover {
+  background-color: #b48ead;
+}
+
+.projects-container {
+  padding: 5rem 0;
+}
+
+.projects-container h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.project-card {
+  border: 1px solid #eceff4;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
+  transition: all .2s ease-in-out;
+}
+
+.project-card:hover {
+  transform: scale(1.1);
+  border-color: #a3be8c;
+}
+
+.project-card .project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 5px;
+}
+
+.project-card .folder-icon {
+  font-size: 35px;
+  color: #88c0d0;
+}
+
+.project-card .small-icons {
+  display: flex;
+  gap: 0 5px;
+}
+
+.project-card .small-icons a {
+  margin-right: 5px;
+  cursor: pointer;
+  font-size: 25px;
+  transition: all .5s ease;
+  color: #eceff4;
+}
+
+.project-card .small-icons a:hover {
+  color: #a3be8c;
+}
+
+.project-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #eceff4;
+}
+
+.project-card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #d8dee9;
+}
+
+.contact-container {
+  padding: 5rem 0;
+}
+
+.contact-container h2 {
+  font-size: 40px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: #8fbcbb;
+}
+
+.contact-container p {
+  text-align: center;
+  padding: 2rem 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.contact-card {
+  text-align: center;
+  border: 1px solid #eceff4;
+  border-radius: 5px;
+  padding: 20px;
+  transition: all .5s ease;
+}
+
+.contact-card h2 {
+  color: #d8dee9;
+}
+
+.contact-card:hover {
+  transform: scale(1.1);
+  border-color: #a3be8c;
+}
+
+.contact-card i {
+  padding: .5rem 0;
+  font-size: 25px;
+  transition: all .5s ease;
+}
+
+.contact-card i:hover {
+  color: #a3be8c;
+}
+
+.footer-container {
+  position: absolute;
+  top: 300vh;
+  text-align: center; 
+}
+
+.footer-container hr {
+  width: 70vw;
+}
+
+.contact-container p {
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  width: 3.5rem;
+  height: 3.7rem;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  background-color: #88c0d0;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s ease;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
+  color: #3b4252;
+}
+
+#myBtn:hover {
+  background-color: #a3be8c;
 }
