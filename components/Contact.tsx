@@ -14,7 +14,7 @@ const Contact = () => {
                 {contactData && contactData.map((contact) => (
                     <a className="contact-card-clickable" href={contact.link} key={contact.id}><div className="contact-card" key={contact.id}>
                     <h2>{contact.heading}</h2>
-                    <a href={contact.link}><i className={contact.icon}></i></a>
+                    <i className={contact.icon}></i>
                 </div></a>
                 ))}
             </div>

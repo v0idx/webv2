@@ -31,8 +31,8 @@ export const projectData = [
     },
     {
         id: 6,
-        title: "Web",
-        description: "This website! Source hosted here.",
-        githubLink: "https://github.com/v0idx/web",
+        title: "Webv2",
+        description: "This website! Built in react using NextJs, and hosted on Vercel.",
+        githubLink: "https://github.com/v0idx/webv2",
     }
 ];
