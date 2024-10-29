@@ -8,7 +8,7 @@ export const projectData = [
     {
         id: 2,
         title: "JSON Format",
-        description: "Command line application to format ugly JSON, nicey.",
+        description: "Command line application to format ugly JSON, nicely.",
         githubLink: "https://github.com/v0idx/json_format",
     },
     {

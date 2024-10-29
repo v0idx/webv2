@@ -15,7 +15,7 @@ body {
   font-family: sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background-color: #2e3440;
+  background:none;
   color: #DADADB;
   width: 70%;
   margin: 0 auto;
@@ -48,6 +48,7 @@ section {
   left: 50%;
   width: 0;
   height: 30px;
+  background:fixed;
 }
 
 #contact-button {
@@ -195,6 +196,7 @@ section .down-arrow:hover {
   border-radius: 5px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
   transition: all .2s ease-in-out;
+  background-color: #2e3440;
 }
 
 .project-card:hover {
@@ -273,6 +275,7 @@ section .down-arrow:hover {
   border-radius: 5px;
   padding: 20px;
   transition: all .5s ease;
+  background-color: #2e3440;
 }
 
 .contact-card h2 {
