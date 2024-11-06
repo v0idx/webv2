@@ -384,7 +384,7 @@ section .down-arrow:hover {
 .footer-container {
   position:fixed;
   /* top: 300vh; */
-  bottom: 1vh;
+  bottom: 0;
   text-align: center; 
 }
 
