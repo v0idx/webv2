@@ -5,7 +5,6 @@ const nextConfig = {
 }
 
 module.exports = {
-  nextConfig,
   async rewrites() {
       return {
         beforeFiles: [
@@ -17,7 +16,7 @@ module.exports = {
                 value: 'words.v0idx.com',
               },
             ],
-            destination: '/words/:path*',
+            destination: '/words',
           },
         ]
       }
