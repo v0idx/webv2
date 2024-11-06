@@ -26,7 +26,7 @@ export const projectData = [
     {
         id: 5,
         title: "Words",
-        description: "Web app to count words, and then compare them against maximum and minimum values. Live version is down.",
+        description: "Web app to count words, and then compare them against maximum and minimum values. Live on this site!",
         githubLink: "https://github.com/v0idx/words",
     },
     {

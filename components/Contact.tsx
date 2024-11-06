@@ -18,7 +18,6 @@ const Contact = () => {
             <br />
             <br />
             <p>Whether it&apos;s because you want to collaborate, you have some questions, or just say hi, I&apos;ll always try to get back to you!</p>
-            <Footer />
         </div>
     )
 }

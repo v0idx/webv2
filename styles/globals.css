@@ -2,13 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Raleway:wght@400;500;700;800&family=Roboto+Mono:wght@400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Raleway:wght@400;500;700;800&family=Roboto+Mono:wght@400;500&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.logo h3 {
+  display: inline-block;
+}
+
+.active {
+  text-decoration: underline;
+  color: #a3be8c;
 }
 
 body {
@@ -21,6 +29,84 @@ body {
   margin: 0 auto;
   padding: 0 0;
   overflow-y: hidden;
+}
+
+#words {
+  font-size: 4rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: #8fbcbb;
+}
+
+.limits {
+  margin-left: 1vh;
+  height: 5vh;
+  line-height: 4vh;
+  background-color: #3b4252;
+  border-radius: 1vh;
+  border-color: #8fbcbb;
+  border-style:solid;
+  border-width:.3vh;
+  resize: none;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #8fbcbb;
+}
+
+.limits::placeholder {
+  text-align: center;
+  font-family:inherit;
+  font-size: 1rem;
+}
+
+.limits:focus {
+  border-color: #ebcb8b;
+  outline: none !important;
+}
+
+#returnToHomeFromWords {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  background-color: #88c0d0;
+  color: #3b4252;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  display: inline-block;
+}
+
+#returnToHomeFromWords:hover {
+  background-color: #a3be8c;
+  color: #3b4252;
+}
+
+#left-arrow {
+  padding-right: 1vh;
+}
+
+#textArea {
+  width: 100vh;
+  height: 60vh;
+  padding-left: 1vh;
+  font-family: 'Roboto Mono Medium', monospace;
+  font-size: 2rem;
+  color: #8fbcbb;
+  background-color: #3b4252;
+  border-radius: 1vh;
+  border-color: #8fbcbb;
+  border-style:solid;
+  border-width:.3vh;
+  resize: none;
+  margin-bottom: 1vh;
+}
+
+#textArea:focus {
+  border-color: #ebcb8b;
+  outline: none !important;
 }
 
 section {
@@ -296,9 +382,15 @@ section .down-arrow:hover {
 }
 
 .footer-container {
-  position: absolute;
-  top: 300vh;
+  position:fixed;
+  /* top: 300vh; */
+  bottom: 1vh;
   text-align: center; 
+}
+
+.footer-container p {
+  font-family: 'Inter', sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
 }
 
 .footer-container hr {
