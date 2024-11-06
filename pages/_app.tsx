@@ -1,26 +1,22 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import Layout from '../components/Layout'
-import ReactDOM from "react-dom/client";
-import {
-    createBrowserRouter,
-    RouterProvider,
-} from "react-router-dom";
 
 import { useCallback } from "react";
 import Particles from "react-particles";
 import type { Container, Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
+import {useEffect} from 'react';
 
 export default function App({ Component, pageProps }: AppProps) {
+    useEffect(() => {
+            document.getElementById("__next")!.role = "presentation"; 
+    }, []);
   const particlesInit = useCallback(async (engine: Engine) => {
-    console.log(engine);
     await loadFull(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async (container: Container | undefined) => {
-    await console.log(container);
-  }, []);
+  const particlesLoaded = useCallback(async (container: Container | undefined) => {Promise<void>}, []);
   return (
     <Layout>
       <Particles
@@ -37,7 +33,7 @@ export default function App({ Component, pageProps }: AppProps) {
                         value: "#2e3440",
                     },
                 },
-                fpsLimit: 144,
+                fpsLimit: 60,
                 interactivity: {
                     events: {
                         onClick: {
@@ -62,10 +58,10 @@ export default function App({ Component, pageProps }: AppProps) {
                 },
                 particles: {
                     color: {
-                        value: "#e5e9f0",
+                        value: "#b48ead",
                     },
                     links: {
-                        color: "#e5e9f0",
+                        color: "#b48ead",
                         distance: 150,
                         enable: true,
                         opacity: 0.3,

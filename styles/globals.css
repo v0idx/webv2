@@ -16,7 +16,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   background:none;
-  color: #DADADB;
+  color: #eceff4;
   width: 70%;
   margin: 0 auto;
   padding: 0 0;
@@ -60,15 +60,14 @@ section {
 }
 
 section .down-arrow {
-  animation: jump 5s infinite;
+  animation: jump 3s infinite;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
 
 section .down-arrow:hover {
-  -webkit-filter: brightness(70%);
-  filter: brightness(70%);
-}
+  color: #81a1c1;
+  }
 
 
 .nav-container {
@@ -157,7 +156,7 @@ section .down-arrow:hover {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   transition: all 0.5s ease-in-out;
-  cursor: context-menu;
+  cursor:default;
 }
 
 .skills-container .skills-grid i {
@@ -165,7 +164,7 @@ section .down-arrow:hover {
 }
 
 .skills-container .skills-grid .skill-card:hover {
-  background-color: #b48ead;
+  background-color: #5e81ac;
 }
 
 .projects-container {
@@ -253,7 +252,6 @@ section .down-arrow:hover {
   font-size: 40px;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  color: #8fbcbb;
 }
 
 .contact-container p {
@@ -265,7 +263,7 @@ section .down-arrow:hover {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 
@@ -283,7 +281,7 @@ section .down-arrow:hover {
 }
 
 .contact-card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   border-color: #a3be8c;
 }
 
