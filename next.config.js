@@ -9,14 +9,24 @@ module.exports = {
       return {
         beforeFiles: [
           {
-            source: '/:path*',
+            source: '/',
             has: [
               {
                 type: 'host',
                 value: 'words.v0idx.com',
               },
             ],
-            destination: '/words',
+            destination: 'https://v0idx.com/words',
+          },
+          {
+            source: '/',
+            has: [
+              {
+                type: 'host',
+                value: 'words.localhost:3000',
+              }
+            ],
+            destination: 'http://localhost:3000/words',
           },
         ]
       }
