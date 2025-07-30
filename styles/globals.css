@@ -383,14 +383,13 @@ section .down-arrow:hover {
 
 .footer-container {
   position:fixed;
-  /* top: 300vh; */
   bottom: 0;
   text-align: center; 
 }
 
 .footer-container p {
   font-family: 'Inter', sans-serif;
-  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+  font-feature-settings: 'liga' 1, 'calt' 1;
 }
 
 .footer-container hr {
