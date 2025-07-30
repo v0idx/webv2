@@ -8,6 +8,8 @@ import type { Container, Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
 import {useEffect} from 'react';
 
+import { Analytics } from "@vercel/analytics/next";
+
 export default function App({ Component, pageProps }: AppProps) {
     useEffect(() => {
             document.getElementById("__next")!.role = "presentation"; 
@@ -101,6 +103,7 @@ export default function App({ Component, pageProps }: AppProps) {
             }}
         />
       <Component {...pageProps} />
+      <Analytics />
     </Layout>
   );
 }
